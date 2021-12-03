@@ -6,25 +6,32 @@ public class NumberCounter {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter number count: ");
+        //System.out.print("Enter number count: ");
         int numberCount = input.nextInt();
 
         int[] numbers = new int[numberCount];
 
-        System.out.println("Enter numbers: ");
+        //System.out.println("Enter numbers: ");
         for (int index = 0; index < numbers.length; index++) {
             numbers[index] = input.nextInt();
         }
 
-        System.out.print("Search for number: ");
+        //System.out.print("Search for number: ");
         int number = input.nextInt();
 
-        int numberOccurrences = 0; // Call method
-        System.out.println("Number occurrences: " + numberOccurrences);
+        int numberOccurrences = 0;
+        //countNumberOccurrences(number, numbers);// Call method
+        System.out.println("Number occurrences: " + countNumberOccurrences(number, numbers));
     }
 
     public static int countNumberOccurrences(int number, int[] numbers) {
-        // Implement method
-        return 0;
+        int counter = 0;
+        for(int i = 0;i < numbers.length; i++){
+            if(numbers[i] == number){
+                counter++;
+            }
+        }
+
+        return counter;
     }
 }
